@@ -14,9 +14,9 @@
   新增活动的时候，需要在package.json里添加目录名，多个以`,`隔开。
   `"pages": "page1,page2"` 
   
-  开发模式启动：`npm run dev`
-  测试环境：`npm run test`
-  pre和线上环境：`npm run release`
+  - 开发模式启动：`npm run dev`
+  - 测试环境：`npm run test`
+  - pre和线上环境：`npm run release`
 
 - 更新依赖
 
