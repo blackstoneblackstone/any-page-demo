@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="charset=text/html;charset=utf-8">
+  <meta name="format-detection" content="telphone=no, email=no">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1">
+  <title>VIPKID 在线少儿英语</title>
+  <script>
+    const ua = navigator.userAgent
+    const ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+      isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+      isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+      isMobile = isIphone || isAndroid
+    //判断
+    if (isMobile) {
+      window.onload = window.onresize = function () {
+        /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+         为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+        getRem(375, 16)
+      }
+    }
+
+    function getRem(pwidth, prem) {
+      var html = document.getElementsByTagName("html")[0]
+      var oWidth = document.body.clientWidth || document.documentElement.clientWidth
+      html.style.fontSize = oWidth / pwidth * prem + "px"
+    }
+  </script>
+</head>
+<body>
+<div id="app">
+
+</div>
+</body>
+</html>

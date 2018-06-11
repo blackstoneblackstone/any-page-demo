@@ -1,0 +1,105 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    },
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true
+  },
+  "plugins": [
+    //插件，此插件用于识别文件中的js代码，没有MIME类型标识没有script标签也可以识别到，因此拿来识别.vue文件中的js代码
+    "html"
+  ],
+  "rules": {
+    //不允许对象中出现结尾逗号
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    //不允许出现console语句
+    "no-console": 1,
+    //条件语句的条件中不允许出现恒定不变的量
+    "no-constant-condition": 2,
+    //函数定义的时候不允许出现重复的参数
+    "no-dupe-args": 2,
+    //对象中不允许出现重复的键
+    "no-dupe-keys": 2,
+    //switch语句中不允许出现重复的case标签
+    "no-duplicate-case": 2,
+    //不允许出现空的代码块
+    "no-empty": 2,
+    //不允许出现不必要的圆括号
+    "no-extra-parens": 0,
+    //不允许出现不必要的分号
+    "no-extra-semi": 2,
+    //不允许重新分配函数声明
+    "no-func-assign": 2,
+    //不允许在嵌套代码块里声明函数
+    "no-inner-declarations": [
+      "error",
+      "functions"
+    ],
+    //不允许出现不规则的空格
+    "no-irregular-whitespace": 2,
+    //数组中不允许出现空位置
+    "no-sparse-arrays": 2,
+    //在return，throw，continue，break语句后不允许出现不可能到达的语句
+    "no-unreachable": 2,
+    //要求检查NaN的时候使用isNaN()
+    "use-isnan": 2,
+    //大括号风格
+    "brace-style": [
+      1,
+      "1tbs",
+      {
+        "allowSingleLine": false
+      }
+    ],
+    //强制驼峰命名规则
+    "camelcase": [
+      1,
+      {
+        "properties": "never"
+      }
+    ],
+    //不能用多余的空格
+    "no-multi-spaces": 1,
+    //空行最多不能超过1行
+    "no-multiple-empty-lines": [
+      1,
+      {
+        "max": 1
+      }
+    ],
+    //不以新行开始的块{前面要不要有空格
+    "space-before-blocks": [
+      0,
+      "always"
+    ],
+    //缩进风格 两个空格
+    "indent": [
+      2,
+      2
+    ],
+    //语句不允许分号结尾
+    "semi": [
+      2,
+      "never"
+    ],
+    //逗号风格，换行时在行尾
+    "comma-style": [
+      2,
+      "last"
+    ],
+    //文件末尾删掉空行
+    "eol-last": [
+      1,
+      "always"
+    ]
+  }
+}  
