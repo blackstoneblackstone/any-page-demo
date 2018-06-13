@@ -124,12 +124,5 @@ var common = (page) => {
           return configs
 
     }
-    ```
-    :
-    ```
 }
-```
-```
-```
-```
 ```
